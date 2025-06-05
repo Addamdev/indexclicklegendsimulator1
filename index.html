@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Legend Simulator - الموقع الرسمي</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://cdn.discordapp.com/attachments/1375533123269562478/1379835809724891166/image.png?ex=6842587d&is=684106fd&hm=7dd2ad24e942f24882030bad3ae22b444a276adaf0c5787125b9c0e0c352178b&" alt="Logo" class="logo">
+            <h1>Click Legend Simulator - الموقع الرسمي</h1>
+        </div>
+    </header>
+
+    <div class="stats-container">
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-paw"></i>
+            <div class="stat-info">
+                <h3>إجمالي الحيوانات</h3>
+                <span class="stat-number" id="totalPets">0</span>
+            </div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-star"></i>
+            <div class="stat-info">
+                <h3>حيوانات شايني</h3>
+                <span class="stat-number" id="shinyPets">0</span>
+            </div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-rainbow"></i>
+            <div class="stat-info">
+                <h3>حيوانات راينبو</h3>
+                <span class="stat-number" id="rainbowPets">0</span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="filters-container">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="ابحث عن حيوان...">
+            </div>
+            <select id="sortSelect" class="sort-select">
+                <option value="default">الترتيب الافتراضي</option>
+                <option value="price-asc">السعر: من الأقل للأعلى</option>
+                <option value="price-desc">السعر: من الأعلى للأقل</option>
+                <option value="rarity">الندرة</option>
+            </select>
+        </div>
+
+        <div id="petsGrid" class="pets-grid">
+            <!-- سيتم إضافة بطاقات الحيوانات هنا -->
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="petModal">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="petDetails" class="pet-details">
+                <!-- سيتم إضافة تفاصيل الحيوان هنا -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>عن الموقع</h3>
+                <p>موقع Click Legend Simulator الرسمي هو المرجع الأول لأسعار الحيوانات في اللعبة</p>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="https://discord.com/invite/aBzdMPNr">انضم إلى الديسكورد</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Click Legend Simulator. جميع الحقوق محفوظة - الموقع الرسمي</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
